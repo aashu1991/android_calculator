@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:text="."
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_equals"
+        app:layout_constraintEnd_toStartOf="@+id/enter_image"
         app:layout_constraintStart_toEndOf="@+id/button_0" />
 
     <Button
@@ -75,7 +75,7 @@
         android:text="="
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_point" />
+        app:layout_constraintStart_toEndOf="@+id/enter_image" />
 
     <Button
         android:id="@+id/Button_1"
@@ -119,13 +119,13 @@
 
     <Button
         android:id="@+id/button_4"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="4"
         app:layout_constraintBottom_toTopOf="@+id/Button_1"
         app:layout_constraintEnd_toStartOf="@+id/button_5"
-        app:layout_constraintStart_toStartOf="parent"
-        style="@style/Widget.AppCompat.Button.Borderless" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_5"
@@ -249,4 +249,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/operator_symbol" />
+
+    <ImageView
+        android:id="@+id/enter_image"
+        android:layout_width="104dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_equals"
+        app:layout_constraintStart_toEndOf="@+id/button_point"
+        app:srcCompat="@drawable/enter_icon"
+        app:tint="#ffffff" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         Button button_Clr = findViewById(R.id.button_Clr);
         Button button_percentage = findViewById(R.id.button_percentage);
         Button button_divide = findViewById(R.id.button_divide);
+        ImageView enter_image = findViewById(R.id.enter_image);
 
         Button button_equals = findViewById(R.id.button_equals);
         editView_num1 = findViewById(R.id.editView_num1);
@@ -248,6 +250,17 @@ public class MainActivity extends AppCompatActivity {
                     editView_num2.setText(final_value);
                 }
 
+            }
+        });
+
+        enter_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (editView_num1.hasFocus()) {
+                    editView_num2.requestFocus();
+                } else if (editView_num2.hasFocus()) {
+                    operator_symbol.requestFocus();
+                }
             }
         });
     }
